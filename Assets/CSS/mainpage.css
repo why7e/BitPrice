@@ -1,0 +1,53 @@
+html {
+    width:100%;
+    background-color: rgba(0,0,0,0.025);
+}
+
+body {
+    width: 100%;
+}
+
+#headertext {
+    text-align: center;
+    font-family: "Open Sans";
+    position: relative;
+    top: 50%;
+    transform: translateY(-60%);
+}
+
+#converter {
+    padding-top: 40vh;
+    text-align: center;
+}
+
+#lefbox {
+    display:inline-block;
+    width:45%;
+}
+
+#equals {
+    display:inline-block;
+    width:10%;
+}
+
+#rightbox {
+    width:45%;
+    display:inline-block;
+}
+
+.header {
+    color: #000;
+    height: 10%;
+    -webkit-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.25);
+    right:0;
+    left:0;
+    vertical-align: middle;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+
