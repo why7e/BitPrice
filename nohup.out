@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "getusd.py", line 13, in <module>
+    sleep(30)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "geteur.py", line 13, in <module>
+    sleep(30)
+KeyboardInterrupt

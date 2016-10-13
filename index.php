@@ -3,6 +3,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <script src="/semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="Assets/JS/update.js"></script>
     <link href="/Assets/CSS/mainpage.css" rel="stylesheet" type="text/css">
     <link href="/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
 </head>
@@ -16,7 +17,7 @@
         <div class="leftbox">
 
 <div class="ui massive right labeled input"  style="margin-right:122.05px;width:30%">
-  <input type="text" value="1" class="input-element">
+  <input type="text" value="1" class="input-element" onkeyup="update(0)" id="crypto">
   <div class="ui massive search dropdown label">
     <div class="text">BTC</div>
     <i class="dropdown icon"></i>
@@ -31,8 +32,20 @@
         <div id="equals">
           <c style="color:#808080">=</p>
         </div>
-<div class="ui massive input" style="float:left">
-  <input type="text" placeholder="...">
+
+<div class="rightbox">
+<div class="ui massive right labeled input"  style="margin-right:122.05px;width:30%;float:left">
+  <input type="text" placeholder="..." class="input-element" onkeyup="update(1)" id="fiat">
+  <div class="ui massive search dropdown label">
+    <div class="text">USD</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">USD</div>
+      <div class="item">EUR</div>
+      <div class="item">GBP</div>
+    </div>
+  </div>
+</div>
 </div>
 </div>
     </div>

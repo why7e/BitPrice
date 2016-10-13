@@ -67,8 +67,8 @@ body {
     display:inline-block;
 }
 
-::-webkit-input-placeholder { text-align: center; color: #000; font-size: 50px; }
-::-moz-placeholder { text-align: center; color: #000; font-size: 50px; } /* firefox 19+ */
-:-ms-input-placeholder { text-align: center; color: #000; font-size: 50px; } /* ie */
-input:-moz-placeholder { text-align: center; color: #000; font-size: 50px; }
+::-webkit-input-placeholder { text-align: center; color: #000; font-size: 100px; }
+::-moz-placeholder { text-align: center; color: #000; font-size: 100px; } /* firefox 19+ */
+:-ms-input-placeholder { text-align: center; color: #000; font-size: 100px; } /* ie */
+input:-moz-placeholder { text-align: center; color: #000; font-size: 100px; }
 
