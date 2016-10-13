@@ -15,24 +15,28 @@ body {
     transform: translateY(-60%);
 }
 
+#id {
+    font-size: 50px
+}
+
 #converter {
-    padding-top: 40vh;
+    padding-top: 45vh;
     text-align: center;
 }
 
-#lefbox {
-    display:inline-block;
-    width:45%;
-}
 
 #equals {
+    width: 6%;
+    font-size:64px;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    float:left;
     display:inline-block;
-    width:10%;
-}
-
-#rightbox {
-    width:45%;
-    display:inline-block;
+    text-align:center;
+    top: 50%;
+    transform: translateY(100%);
 }
 
 .header {
@@ -49,5 +53,22 @@ body {
     transform-style: preserve-3d;
 }
 
+.leftbox {
+    width:47%;
+    float:left;
+    text-align:right;
+    display:inline-block;
+}
 
+.rightbox {
+    width:47%;
+    float:left;
+    text-align:left;
+    display:inline-block;
+}
+
+::-webkit-input-placeholder { text-align: center; color: #000; font-size: 50px; }
+::-moz-placeholder { text-align: center; color: #000; font-size: 50px; } /* firefox 19+ */
+:-ms-input-placeholder { text-align: center; color: #000; font-size: 50px; } /* ie */
+input:-moz-placeholder { text-align: center; color: #000; font-size: 50px; }
 

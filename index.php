@@ -11,11 +11,12 @@
         <div id="headertext">
         <p style="font-size:23px">Live Bitcoin Price Ticker</p>
     </div>
-    </div>
-<div id="converter">
-<div id="leftbox">
-<div class="ui massive right labeled input" style="width:15%;min-width:150px">
-  <input type="text" value="1" class="input-element" style="width:50%;">
+           </div>
+    <div id="converter">
+        <div class="leftbox">
+
+<div class="ui massive right labeled input"  style="margin-right:122.05px;width:30%">
+  <input type="text" value="1" class="input-element">
   <div class="ui massive search dropdown label">
     <div class="text">BTC</div>
     <i class="dropdown icon"></i>
@@ -23,16 +24,18 @@
       <div class="item">BTC</div>
       <div class="item">LTC</div>
       <div class="item">ETH</div>
+    </div>
   </div>
 </div>
+        </div>
+        <div id="equals">
+          <c style="color:#808080">=</p>
+        </div>
+<div class="ui massive input" style="float:left">
+  <input type="text" placeholder="...">
 </div>
 </div>
-<div id="equals">
-  =
-</div>
-<div id="rightbox">
-</div>
-</div>
+    </div>
     
 <script>
 $('.ui.search.dropdown.label')
