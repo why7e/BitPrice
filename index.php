@@ -17,9 +17,9 @@
         <div class="leftbox">
 
 <div class="ui massive right labeled input"  style="margin-right:122.05px;width:30%">
-  <input type="text" value="1" class="input-element" onkeyup="update(0)" id="crypto">
+  <input type="text" value="1" class="input-element" id="leftbox">
   <div class="ui massive search dropdown label">
-    <div class="text">BTC</div>
+    <div class="text" id="inputCurrency">BTC</div>
     <i class="dropdown icon"></i>
     <div class="menu">
       <div class="item">BTC</div>
@@ -35,9 +35,9 @@
 
 <div class="rightbox">
 <div class="ui massive right labeled input"  style="margin-right:122.05px;width:30%;float:left">
-  <input type="text" placeholder="..." class="input-element" onkeyup="update(1)" id="fiat">
+  <input type="text" placeholder="..." class="input-element" id="rightbox">
   <div class="ui massive search dropdown label">
-    <div class="text">USD</div>
+    <div class="text" id="outputCurrency">USD</div>
     <i class="dropdown icon"></i>
     <div class="menu">
       <div class="item">USD</div>

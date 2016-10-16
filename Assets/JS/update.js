@@ -1,9 +1,20 @@
-function update(n) {
-    if (n == 0) {
-        crypto_input = $("#crypto").val();
-        $("#fiat").val(bitcoinprices(crypto_input));
-    } else {
-        fiat_input = $("#fiat").val();
-        $("#crypto_input").val(bitcoinprices(fiat_input));
-    }
-}
+$(document).ready(function(){
+    $("#leftbox").keyup(function(){
+        // Getting the current value of textarea
+        var currentText = $(this).val();
+        
+        var inputCurrency = document.getElementById('inputCurrency');
+        var inputText = inputCurrency.textContent;
+        var inputLowerCase = inputText.toLowerCase();
+        
+        var outputCurrency = document.getElementById('outputCurrency');
+        var outputText = outputCurrency.textContent
+        var outputLowerCase = outputText.toLowerCase();
+        
+        var exchangerate = $.get('/api/' + inputLowerCase + '/' + outputLowerCase + '.php');
+        
+        // Setting the Div content
+        var outputbox = document.getElementById("rightbox");
+				outputbox.value = currentText * exchangerate;
+    });
+});
