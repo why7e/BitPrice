@@ -7,7 +7,7 @@
     <link href="/Assets/CSS/mainpage.css" rel="stylesheet" type="text/css">
     <link href="/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
 </head>
- <body onLoad="reload()">
+ <body onLoad="firstload()">
     <div class="header">
         <div id="headertext">
         <p style="font-size:23px">Live Bitcoin Price Ticker</p>
