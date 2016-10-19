@@ -19,8 +19,10 @@ function getprices() {
         global.prices = data;
     });
     
-    reload()
-    
+setInterval(reload(), 1000)
+
+
+
 }
 
 function firstload() {
