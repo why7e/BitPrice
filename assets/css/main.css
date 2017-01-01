@@ -40,13 +40,15 @@ body {
 }
 
 #input {
-    display: inline;
+    vertical-align:middle;
+    display:table-cell;
+    padding: 0,0,0,0;
 }
 
 #output {
-    display: inline;
-    height: 100%;
-    box-sizing: content-box;
+    padding: 0,0,0,0;
+    vertical-align:middle;
+    display:table-cell;
 }
 
 #logo {

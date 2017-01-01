@@ -16,13 +16,13 @@
         </div>
 <div id="sub">
     <div id="focus">
-        <span id="input">
-        <input id="leftseginput" onkeyup="updateoutput()" value="1" size="10"></input><button id="rightseginput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">BTC</button>
-        </span>
+        <div id="input">
+        <span contenteditable="true" id="leftseginput" class="resize" onkeyup="updateoutput()" value="1" size="10"></span><button id="rightseginput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">BTC</button>
+        </div>
         <span id="equals">=</span>
-        <span id="output">
-        <input id="leftsegoutput" onkeyup="updateinput()" size="10"></input><button id="rightsegoutput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">USD</button>
-        </span>
+        <div id="output">
+        <span contenteditable="true" id="leftsegoutput" onkeyup="updateinput()" size="10"></span><button id="rightsegoutput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">USD</button>
+        </div>
     </div>
 </div>
         </div>
