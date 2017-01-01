@@ -41,14 +41,14 @@ body {
 
 #input {
     vertical-align:middle;
-    display:table-cell;
+    display:inline;
     padding: 0,0,0,0;
 }
 
 #output {
     padding: 0,0,0,0;
     vertical-align:middle;
-    display:table-cell;
+    display:inline;
 }
 
 #logo {
