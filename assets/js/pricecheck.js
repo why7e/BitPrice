@@ -1,13 +1,14 @@
-var global = {};
+global = {}
 
 function firstload() {
+        $('#leftseginput').html(1);
         $.get('/pulse/prices.json', function(prices) { // Download exchange rates
         var inputAmount = $('#leftseginput').html(); // Get the amount of altcoin
         var inputCurrency = $('#rightseginput').html(); // Find what altcoin (not in use atm)
         var key = $('#rightsegoutput').text();
         var exchangeRate = prices[key].last; // Get the value of altcoin in chosen currency
         var value = exchangeRate * inputAmount
-        $('#leftsegoutput').val(value)
+        $('#leftsegoutput').html(value)
         });
         getprices()
 }
