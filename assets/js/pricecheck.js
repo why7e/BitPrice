@@ -14,9 +14,12 @@ function firstload() {
 }
 
 function getprices() {
-    $.get('/pulse/prices.json', function(data) {
+    setInterval(function() {
+        $.get('/pulse/prices.json', function(data) {
             global.prices = data;
+            updateoutput()
         });
+    }, 5000);
 }
 
 

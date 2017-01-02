@@ -11,20 +11,22 @@
         <div class="header">
             <div height="10%"><a href="https://bitcointalk.org/index.php?action=profile;u=523317"><img src=/assets/images/logo.png id="logo"></a></div>
             <div style="width:100vw;height:24px;transform: translateY(-12px);padding-top:5vh;text-align: center;">
-                <p style="font-size:24px;transform: translateX(-11vh);">Live Bitcoin Price Ticker</p>
+                <p style="font-size:24px;transform: translateX(-8vh);">Live Bitcoin Price Ticker</p>
             </div>
         </div>
 <div id="sub">
     <div id="focus">
-        <div id="input">
+        <span id="input">
         <span contenteditable="true" id="leftseginput" class="resize" onkeyup="updateoutput()" value="1" size="10"></span><button id="rightseginput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">BTC</button>
-        </div>
-        <span id="equals">=</span>
-        <div id="output">
+        </span>
+        <div style="display:inline;height:100%; vertical-align: middle;padding-bottom:50%"><img style="height:100%;transform: translateY(-50%);" src=/assets/images/equals.png id="equals"></div>
+        <span id="output">
         <span contenteditable="true" id="leftsegoutput" onkeyup="updateinput()" size="10"></span><button id="rightsegoutput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">USD</button>
-        </div>
+        </span>
     </div>
 </div>
         </div>
         </body>
 </html>
+
+
