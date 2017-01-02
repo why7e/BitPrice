@@ -1,4 +1,45 @@
 global = {}
+function loadselects() {
+    document.querySelector('.inputin').onfocus = function(e) {
+        var el = this;
+        requestAnimationFrame(function() {
+            selectElementContents(el);
+        });
+    };
+    
+    document.querySelector('.inputout').onfocus = function(e) {
+        var el = this;
+        requestAnimationFrame(function() {
+            selectElementContents(el);
+        });
+    };
+}
+
+function selectElementContents(el) {
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+
+function selectallin() {
+    var el = $("#leftseginput")[0];
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+};
+
+function selectallout() {
+    var el = $("#leftsegoutput")[0];
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+};
 
 function firstload() {
         $('#leftseginput').html(1);
