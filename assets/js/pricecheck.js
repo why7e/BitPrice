@@ -3,6 +3,7 @@ global = {}
 function firstload() {
         $('#leftseginput').html(1);
         $.get('/pulse/prices.json', function(prices) { // Download exchange rates
+        global.prices = prices;
         var inputAmount = $('#leftseginput').html(); // Get the amount of altcoin
         var inputCurrency = $('#rightseginput').html(); // Find what altcoin (not in use atm)
         var key = $('#rightsegoutput').text();
@@ -41,16 +42,3 @@ function updateinput() {
         var value = outputAmount / exchangeRate;
         $('#leftseginput').html(+value.toFixed(5))
 }
-
-function textWidth() {
-    if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').appendTo(document.body);
-    var htmlText = text || this.val() || this.text();
-    htmlText = $.fn.textWidth.fakeEl.text(htmlText).html(); //encode to Html
-    htmlText = htmlText.replace(/\s/g, "&nbsp;"); //replace trailing and leading spaces
-    $.fn.textWidth.fakeEl.html(htmlText).css('font', font || this.css('font'));
-    return $.fn.textWidth.fakeEl.width();
-};
-
-$('#leftseginput').on('input', function() {
-    $('leftseginput-width').html($(this).textWidth() + 'px');
-}).trigger('input');
