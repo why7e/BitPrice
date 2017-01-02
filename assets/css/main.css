@@ -36,19 +36,22 @@ body {
     vertical-align: middle;
     border-radius: .125em;
     max-height: 200px;
-    height: 10%;
+    height: 5%;
 }
 
 #input {
     vertical-align:middle;
-    display:inline;
     padding: 0,0,0,0;
+    display: inline;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 #output {
     padding: 0,0,0,0;
     vertical-align:middle;
     display:inline;
+    box-sizing: border-box;
 }
 
 #logo {
@@ -72,7 +75,6 @@ body {
     border-color:#cccccc;
     margin-left: 0.75%;
     display: inline-block;
-    height:100%;
     padding-right: 2%;
     padding-left:2%;
     font-family: "Open Sans";
@@ -93,7 +95,6 @@ body {
     border-color:#cccccc;
     margin-left: 0.75%;
     display: inline-block;
-    height:100%;
     padding-right: 2%;
     padding-left:2%;
     font-family: "Open Sans";
@@ -107,13 +108,13 @@ body {
 }
 
 #leftseginput {
+    padding:10px;
     text-decoration: none;
     border-radius: .25em 0 0 .25em;
     border-width: 1px;
     border-style: solid;
     border-color:#cccccc;
     display: inline-block;
-    height:100%;
     padding-right: 0.5%;
     padding-left:0.5%;
     font-family: "Open Sans";
@@ -129,13 +130,13 @@ body {
 }
 
 #leftsegoutput {
+    padding:10px;
     text-decoration: none;
     border-radius: .25em 0 0 .25em;
     border-width: 1px;
     border-style: solid;
     border-color:#cccccc;
     display: inline-block;
-    height:100%;
     padding-right: 0.5%;
     padding-left:0.5%;
     font-family: "Open Sans";
