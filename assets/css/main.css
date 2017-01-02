@@ -107,6 +107,12 @@ body {
     box-shadow:none;
 }
 
+#rightsegoutput:active {
+    background-color:#f9f9f9;
+    color:#323232;
+    border-color:#d6d6d6;
+}
+
 #leftseginput {
     padding:10px;
     text-decoration: none;
@@ -160,7 +166,6 @@ body {
     font-size:24px;
     transform: translateX(-8vh);
 }
-
 
 .header {
     color: #000;

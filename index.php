@@ -24,11 +24,11 @@
 <div id="sub">
     <div id="focus">
         <span id="input">
-        <span contenteditable="true" id="leftseginput" class="inputin" onkeypress="focusin()" onkeyup="updateoutput()" value="1" size="10"></span><button id="rightseginput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">BTC</button>
+        <span contenteditable="true" id="leftseginput" class="inputin" onkeypress="focusin()" onkeyup="updateoutput()" value="1" size="10"></span><button id="rightseginput">BTC</button>
         </span>
         <div style="display:inline;height:100%; vertical-align: middle;padding-bottom:50%"><img src=/assets/images/equals.png id="equals"></div>
         <span id="output">
-        <span contenteditable="true" id="leftsegoutput" class="inputout" onkeypress="focusout()" onkeyup="updateinput()" size="10"></span><button id="rightsegoutput" onfocus="if (!this.active) this.active = true; numFocus()" onmousedown="this.active = this.active || (doc.activeElement !== this)" onmouseup="var a = this.active; this.active = false; if (a) return false">USD</button>
+        <span contenteditable="true" id="leftsegoutput" class="inputout" onkeypress="focusout()" onkeyup="updateinput()" size="10"></span><button onClick="nextcurrency()" id="rightsegoutput">USD</button>
         </span><script>$("#leftseginput,#leftsegoutput").ForceNumericOnly();</script>
     </div>
 </div>

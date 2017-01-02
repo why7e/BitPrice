@@ -1,4 +1,27 @@
 global = {}
+global.fcounter = 0
+global.fkeys = ["USD", "EUR", "GBP", "AUD", "NZD", "CAD", "CNY", "JPY"]
+
+function nextcurrency() {
+    global.fcounter += 1
+    fkey = global.fkeys[global.fcounter]
+    $('button#rightsegoutput').text(fkey)
+    $('#leftseginput').html(1);
+    var inputAmount = $('#leftseginput').html(); // Get the amount of altcoin
+    var inputCurrency = $('#rightseginput').html(); // Find what altcoin (not in use atm)
+    var key = $('#rightsegoutput').text();
+    var exchangeRate = global.prices[key].last; // Get the value of altcoin in chosen currency
+    var value = exchangeRate * inputAmount
+    $('#leftsegoutput').html(+value.toFixed(2))
+    
+    if (global.fcounter > 6) {
+        global.fcounter = -1
+    }
+    else {
+        return;
+    }
+}
+
 function loadselects() {
     document.querySelector('.inputin').onfocus = function(e) {
         var el = this;
