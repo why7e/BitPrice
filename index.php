@@ -20,7 +20,7 @@
         <div class="header">
             <div height="10%"><a href="https://bitcointalk.org/index.php?action=profile;u=523317"><img src=/assets/images/logo.png id="logo"></a></div>
             <div id="title" style="width:100vw;height:24px;transform: translateY(-22px);padding-top:5vh;text-align: center;">
-                <div style="display:inline-block; padding:10px;" data-step="1" data-intro="Introducing BitPrice, the live bitcoin price ticker/converter. This tutorial will go over the site and it's features. Click 'next' for more.>Live Bitcoin Price Ticker</div>
+                <div style="display:inline-block; padding:10px;" data-step="1" data-intro="Introducing BitPrice, the live bitcoin price ticker/converter. This tutorial will go over the site and it's features. Click 'next' for more.">Live Bitcoin Price Ticker</div>
             </div>
             <div style="float:right"><a href="javascript:introJs().start();"><img src=/assets/images/help.png id="help"></a></div>
         </div>
