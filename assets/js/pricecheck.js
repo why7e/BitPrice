@@ -95,6 +95,8 @@ function updateoutput() {
         var exchangeRate = global.prices[key].last; // Get the value of altcoin in chosen currency
         var value = exchangeRate * inputAmount
         $('#leftsegoutput').html(+value.toFixed(2))
+        $('#leftsegoutput').stop().css('color','#f4f4f4');
+        $('#leftsegoutput').animate({color:'#101010'},250);
 }
 
 
@@ -104,5 +106,7 @@ function updateinput() {
         var key = $('#rightsegoutput').text();
         var exchangeRate = global.prices[key].last; // Get the value of altcoin in chosen currency
         var value = outputAmount / exchangeRate;
-        $('#leftseginput').html(+value.toFixed(5))
+        $('#leftseginput').html(+value.toFixed(2))
+        $('#leftseginput').stop().css('color','#f4f4f4');
+        $('#leftseginput').animate({color:'#101010'},250);
 }
