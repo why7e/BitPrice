@@ -26,9 +26,9 @@
         </div>
 <div id="sub">
     <div id="focus">
-        <span id="input" data-step="2" data-intro="This is the cryptocurrency side. Convert your chosen denomination of bitcoin or cryptocurrency">
+        <div id="input" data-step="2" data-intro="This is the cryptocurrency side. Convert your chosen denomination of bitcoin or cryptocurrency"><span style="display:inline;">
         <span contenteditable="true" id="leftseginput" class="inputin" onkeyup="updateoutput()" value="1" size="10"></span><button id="rightseginput">BTC</button>
-        </span>
+        </span></div>
         <div style="display:inline;height:100%; vertical-align: middle;padding-bottom:50%"><img src=/assets/images/equals.png id="equals"></div>
         <span id="output">
         <span contenteditable="true" id="leftsegoutput" class="inputout" onkeyup="updateinput()" size="10"></span><button onClick="nextcurrency()" id="rightsegoutput">USD</button>
