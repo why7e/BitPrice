@@ -9,11 +9,11 @@ function nextcurrency() {
     $('#leftseginput').html(1);
     var inputAmount = $('#leftseginput').html(); // Get the amount of altcoin
     var inputCurrency = $('#rightseginput').html(); // Find what altcoin (not in use atm)
-    var key = $('#rightsegoutput').text();
-    var exchangeRate = global.prices[key].last; // Get the value of altcoin in chosen currency
+    global.key = $('#rightsegoutput').text();
+    var exchangeRate = global.prices[global.key].last; // Get the value of altcoin in chosen currency
     var value = exchangeRate * inputAmount
     $('#leftsegoutput').html(+value.toFixed(2))
-    
+    document.title = value + " " + global.key;
     if (global.fcounter > 6) {
         global.fcounter = -1
     }
@@ -70,9 +70,10 @@ function firstload() {
         global.prices = prices;
         var inputAmount = $('#leftseginput').html(); // Get the amount of altcoin
         var inputCurrency = $('#rightseginput').html(); // Find what altcoin (not in use atm)
-        var key = $('#rightsegoutput').text();
-        var exchangeRate = prices[key].last; // Get the value of altcoin in chosen currency
+        global.key = $('#rightsegoutput').text();
+        var exchangeRate = prices[global.key].last; // Get the value of altcoin in chosen currency
         var value = exchangeRate * inputAmount
+        document.title = value + " " + global.key;
         $('#leftsegoutput').html(value)
         });
         getprices()
@@ -82,7 +83,12 @@ function getprices() {
     setInterval(function() {
         $.get('/pulse/prices.json', function(data) {
             global.prices = data;
-            updateoutput()
+            if ($('#leftsegoutput').is(":focus")) {
+                return;
+            }
+            else {
+                updateoutput()
+            }
         });
     }, 5000);
 }
@@ -91,8 +97,8 @@ function getprices() {
 function updateoutput() {
         var inputAmount = $('#leftseginput').html(); // Get the amount of altcoin
         var inputCurrency = $('#rightseginput').html(); // Find what altcoin (not in use atm)
-        var key = $('#rightsegoutput').text();
-        var exchangeRate = global.prices[key].last; // Get the value of altcoin in chosen currency
+        global.key = $('#rightsegoutput').text();
+        var exchangeRate = global.prices[global.key].last; // Get the value of altcoin in chosen currency
         var value = exchangeRate * inputAmount
         $('#leftsegoutput').html(+value.toFixed(2))
         $('#leftsegoutput').stop().css('color','#f4f4f4');
@@ -103,10 +109,32 @@ function updateoutput() {
 function updateinput() {
         var outputAmount = $('#leftsegoutput').html(); // Get the amount of currency
         var outputCurrency = $('#rightsegoutput').html(); // Find what currency (not in use atm)
-        var key = $('#rightsegoutput').text();
-        var exchangeRate = global.prices[key].last; // Get the value of altcoin in chosen currency
+        global.key = $('#rightsegoutput').text();
+        var exchangeRate = global.prices[global.key].last; // Get the value of altcoin in chosen currency
         var value = outputAmount / exchangeRate;
         $('#leftseginput').html(+value.toFixed(2))
         $('#leftseginput').stop().css('color','#f4f4f4');
         $('#leftseginput').animate({color:'#101010'},250);
+}
+
+global.toggleSelection = [hintson, hintsoff];
+
+function doToggle() {
+    if (global.toggleCounter == null) {
+        console.log(global.toggleCounter)
+        global.toggleCounter = 1
+        hintson()
+    }
+    else {
+        console.log(global.toggleCounter)
+        global.toggleCounter = null
+        hintsoff()
+    }
+}
+    
+function hintson(){
+   javascript:introJs().addHints();
+}
+function hintsoff(){
+   javascript:introJs().hideHints();
 }

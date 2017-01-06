@@ -1,4 +1,4 @@
-function focusin() {
+function focusout() {
         $('#leftseginput').animate({color:'#f4f4f4'},150);
         $('#leftseginput').css({'font-family' : 'Lato'});
         $('#leftseginput').animate({color:'#101010'},150);
@@ -9,7 +9,7 @@ function focusin() {
 
         
 
-function focusout() {
+function focusin() {
         $('#leftseginput').animate({color:'#f4f4f4'},150);
         $('#leftseginput').css({'font-family' : 'Open Sans'});
         $('#leftseginput').animate({color:'#101010'},150);

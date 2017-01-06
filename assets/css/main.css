@@ -36,7 +36,7 @@ body {
     vertical-align: middle;
     border-radius: .125em;
     max-height: 200px;
-    height: 5%;
+    height: 10%;
 }
 
 #input {
@@ -72,7 +72,7 @@ body {
 #help {
     display:inline;
     padding-right:3vw;
-    margin-top:-8vh;
+    margin-top:-7vh;
     padding-bottom:1vh;
     height:8vh;
     width:8vh;
@@ -141,7 +141,7 @@ body {
     display: inline-block;
     padding-right: 0.5%;
     padding-left:0.5%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans';
     font-size:300%;
     min-height: 35px;
     font-weight: 300;
@@ -154,7 +154,7 @@ body {
 }
 
 #leftsegoutput {
-    font-family: 'Open Sans';
+    font-family: 'Lato', sans-serif;
     padding:10px;
     text-decoration: none;
     border-radius: .25em 0 0 .25em;
