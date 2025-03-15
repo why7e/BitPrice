@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
@@ -29,7 +30,7 @@
         <div id="input" data-hint="<b>This is the cryptocurrency side.</b> <br>The left box is used to input an amount, and the right box is used to choose a denomination of bitcoin. <br>The value will automatically be output to the 'fiat' section.">
         <span contenteditable="true" id="leftseginput" class="inputin" onkeyup="updateoutput()" value="1" size="10"></span><button id="rightseginput">BTC</button>
         </div>
-        <div style="display:inline;height:100%; vertical-align: middle;padding-bottom:50%"><img src=/assets/images/equals.png id="equals"></div>
+        <div style="display:inline;height:100%; vertical-align: middle"><img src=/assets/images/equals.png id="equals"></div>
         <div id="output" data-hint="<b>This is the fiat side. <br>This side returns how much of a currency your amount of bitcoin is worth.<br>You can edit this to do the reverse function.</b>">
         <span contenteditable="true" id="leftsegoutput" class="inputout" onkeyup="updateinput()" size="10"></span><button onClick="nextcurrency()" id="rightsegoutput">USD</button>
         
